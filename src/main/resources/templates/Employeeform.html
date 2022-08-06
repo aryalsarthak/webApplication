@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>employee</title>
+
+</head>
+<body>
+  <div th:insert="header.html"></div>
+ 
+
+
+  <div class="container">
+  <div class="card">
+  <div class="card-header bg-primary text-center text-white fs-2"></div>
+  <div class ="card-body">
+  
+  
+  <form action="/employee" method="post">
+     <div class="row">
+     <div class="cols-2">FirstName</div>
+     <div class="cols-4"><input type="text" name="fname" class="form-control"></div>
+     </div>
+     
+     <div class="row">
+     <div class="cols-4">LastName</div>
+     <div class="cols-6"><input type="text" name="lname" class="form-control"></div>
+     </div>
+     
+     <div class="row">
+     <div class="cols-4">Gender</div>
+   <div class="cols-6">  <input type="radio" name="gender" value="male">male</div>
+  <div> <input type="radio" name="gender" value="female">  female</div>
+     </div>
+     
+     		<div class="row">
+     <div class="cols-4">Dob</div>
+     <div class="cols-6"><input type="date" name="dob" class="form-control"></div>
+    
+     </div>
+     <div class="row">
+     <div class="cols-4">Join date</div>
+     <div class="cols-6"><input type="date" name="joindate" class="form-control"></div>
+    
+     </div>
+           
+           <div class="row">
+     <div class="cols-4">phone</div>
+     <div class="cols-6"><input type="text" name="phone" class="form-control"></div>
+    
+     </div>
+     
+     <div class="row">
+     <div class="cols-4">Company</div>
+     <div class="cols-6"><input type="text" name="companyName" class="form-control"></div>
+    
+     </div>
+          
+            <div class="row">
+     <div class="cols-4">Department</div>
+     <div class="cols-6"><input type="text" name="department" class="form-control"></div>
+    
+     </div>
+     
+       <div class="row">
+     <div class="cols-4">Post</div>
+     <div class="cols-6"><input type="text" name="post" class="form-control"></div>
+    
+     </div>
+     
+       		  <div class="row">
+     <div class="cols-4">Email</div>
+     <div class="cols-6"><input type="email" name="email" class="form-control"></div>
+    
+     </div>
+     
+       <div class="row">
+     <div class="cols-4">Salary</div>
+     <div class="cols-6"><input type="number" name="salary" class="form-control"></div>
+    
+     </div>
+         
+          <div class="row">
+     <div class="cols-4">Age</div>
+     <div class="cols-6"><input type="number" name="age" class="form-control"></div>
+    
+     </div>
+     
+        <div class="row">
+     <div class="cols-4">City</div>
+     <div class="cols-6"><input type="text" name="address.city" class="form-control"></div>
+     </div>
+     
+      <div class="row">
+     <div class="cols-4">Country</div>
+     <div class="cols-6"><input type="text" name="address.country" class="form-control"></div>
+     </div>
+           <div class="row">
+     <div class="cols-4">State</div>
+     <div class="cols-6"><select class="form-control"name="address.state">
+   			<option value="state-1">state-1</option>
+   			<option value="state-2">state-2</option>
+   			<option value="state-3">state-3</option>
+   			<option value="state-4">state-4</option>
+   			<option value="state-5">state-5</option>
+   			<option value="state-6">state-6</option>
+   			<option value="state-7">state-7</option>
+		   
+     </select>
+     </div>
+    
+     </div>
+     
+      <div class="row">
+     <div class="cols-4">Zip</div>
+     <div class="cols-6"><input type="text" name="address.zip" class="form-control"></div>
+    
+     </div>
+     
+      <div class="row py-3">
+     <div class="cols-4"></div>
+     <div class="cols-6"><input type="submit" value="Add" class="btn btn-primary"></div>
+    
+     </div>
+     </form>
+           
+     
+     		
+  
+  </div>
+  <div class="card-footer bg-info text-center text-yellow">copyright@2022</div>
+  
+  
+  
+  </div>
+  </div>
+
+</body>
+</html>

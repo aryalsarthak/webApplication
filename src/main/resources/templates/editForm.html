@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>employee</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<h1 align="center">Edit Form</h1>
+	 <div th:insert="header.html"></div>
+
+  <div class="container">
+  <div class="card">
+  <div class="card-header bg-primary text-center text-white fs-2"></div>
+  <div class ="card-body">
+  
+  
+  <form action="/update" method="post" th:object="${emodel}">
+  	<input type="hidden" th:field="*{id}">
+  	<input type="hidden" th:field="*{address.id}">
+     <div class="row">
+     <div class="cols-2">FirstName</div>
+     <div class="cols-4"><input type="text" th:field="*{fname}" class="form-control"></div>
+     </div>
+     
+     <div class="row">
+     <div class="cols-4">LastName</div>
+     <div class="cols-6"><input type="text" th:field="*{lname}" class="form-control"></div>
+     </div>
+     
+     <div class="row">
+     <div class="cols-4">Gender</div>
+   <div class="cols-6">  <input type="radio" th:field="*{gender}" value="male">male</div>
+  <div> <input type="radio" th:field="*{gender}" value="female">  female</div>
+     </div>
+     
+     		<div class="row">
+     <div class="cols-4">Dob</div>
+     <div class="cols-6"><input type="date" th:field="*{dob}" class="form-control"></div>
+    
+     </div>
+     <div class="row">
+     <div class="cols-4">Join date</div>
+     <div class="cols-6"><input type="date" th:field="*{joindate}" class="form-control"></div>
+    
+     </div>
+           
+           <div class="row">
+     <div class="cols-4">phone</div>
+     <div class="cols-6"><input type="text" th:field="*{phone}" class="form-control"></div>
+    
+     </div>
+     
+     <div class="row">
+     <div class="cols-4">Company</div>
+     <div class="cols-6"><input type="text" th:field="*{companyName}" class="form-control"></div>
+    
+     </div>
+          
+            <div class="row">
+     <div class="cols-4">Department</div>
+     <div class="cols-6"><input type="text" th:field="*{department}" class="form-control"></div>
+    
+     </div>
+     
+       <div class="row">
+     <div class="cols-4">Post</div>
+     <div class="cols-6"><input type="text" th:field="*{post}" class="form-control"></div>
+    
+     </div>
+     
+       		  <div class="row">
+     <div class="cols-4">Email</div>
+     <div class="cols-6"><input type="email" th:field="*{email}" class="form-control"></div>
+    
+     </div>
+     
+       <div class="row">
+     <div class="cols-4">Salary</div>
+     <div class="cols-6"><input type="number" th:field="*{salary}" class="form-control"></div>
+    
+     </div>
+         
+          <div class="row">
+     <div class="cols-4">Age</div>
+     <div class="cols-6"><input type="number" th:field="*{age}" class="form-control"></div>
+    
+     </div>
+     
+        <div class="row">
+     <div class="cols-4">City</div>
+     <div class="cols-6"><input type="text" th:field="*{address.city}" class="form-control"></div>
+     
+      <div class="row">
+     <div class="cols-4">Country</div>
+     <div class="cols-6"><input type="text" th:field="*{address.country}" class="form-control"></div>
+     </div>
+           <div class="row">
+     <div class="cols-4">State</div>
+     <div class="cols-6"><select class="form-control"th:field="*{address.state}">
+   			<option value="state-1">state-1</option>
+   			<option value="state-2">state-2</option>
+   			<option value="state-3">state-3</option>
+   			<option value="state-4">state-4</option>
+   			<option value="state-5">state-5</option>
+   			<option value="state-6">state-6</option>
+   			<option value="state-7">state-7</option>
+		   
+     </select>
+    
+     </div>
+     
+      <div class="row">
+     <div class="cols-4">Zip</div>
+     <div class="cols-6"><input type="text" th:field="*{address.zip}" class="form-control"></div>
+    
+     </div>
+     
+      <div class="row py-3">
+     <div class="cols-4"></div>
+     <div class="cols-6"><input type="submit" value="update" class="btn btn-primary"></div>
+    
+     </div>
+     
+     </form>
+           
+     
+     		
+  
+  </div>
+  <div class="card-footer bg-info text-center text-yellow">copyright@2022</div>
+  
+  
+  
+  </div>
+  </div>
+
+</body>
+</html>
